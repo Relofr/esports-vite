@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 nav {
     background: var(--secondary-bg-color);
     padding: 0 70px;
