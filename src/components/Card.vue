@@ -3,8 +3,10 @@
     <div>
       <div class="tournament-card">
         <div class="image-container">
-          <img src="https://bit.ly/3QAA7or" alt="Snow" style="width:100%;">
-          <div class="registration-status" :class="{ 'isOpen': isOpen, 'isEnding': isEnding, 'isClosed': isClosed }">{{ regStatus }}</div>
+          <img :src="src" alt="" style="width:100%;">
+          <div class="registration-status" :class="{ 'isOpen': isOpen, 'isEnding': isEnding, 'isClosed': isClosed }">{{
+              regStatus
+          }}</div>
         </div>
         <div class="title-price-container">
           <p class="card-title">{{ title }}</p>
@@ -20,7 +22,7 @@
             <fa icon="calendar-days"></fa>{{ date }} - {{ time }}
           </p>
           <p>
-            <fa icon="user"></fa>{{ participants + 'Participants' }}
+            <fa icon="user"></fa>{{ participants + ' participants' }}
           </p>
           <button class="btn secondary-btn" :class="{ 'isDisabled': isDisabled }">Register</button>
         </div>
@@ -36,6 +38,9 @@ export default {
     }
   },
   props: {
+    src: {
+      type: String
+    },
     regStatus: {
       type: String
     },
@@ -114,10 +119,11 @@ img {
 .isOpen {
   background: #0096FF;
 }
+
 .isEnding {
-  background-color: #9222C9
-;
+  background-color: #9222C9;
 }
+
 .isClosed {
   background-color: #DE1200;
 }
@@ -205,6 +211,7 @@ img {
   border-radius: 3px;
   cursor: pointer;
 }
+
 .btn:hover {
   background: #ffb84e;
 }
