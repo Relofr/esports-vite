@@ -216,7 +216,7 @@ img {
   background: #ffb84e;
 }
 
-.isDisabled {
+.isDisabled, .isDisabled:hover {
   background-color: grey;
   cursor: not-allowed;
 }

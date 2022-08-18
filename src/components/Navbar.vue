@@ -1,199 +1,131 @@
 <template>
-    <div>
-        <nav>
-            <ul class="menu nav-text">
-                <li class="logo"><img src="../assets/logo.svg"></li>
-                <li class="item"><a href="#">Home</a></li>
-                <li class="item"><a href="#">Games<fa class="fa-icon" icon="angle-down"></fa></a></li>
-                <li class="item"><a href="#">Tournaments<fa class="fa-icon" icon="angle-down"></fa></a></li>
-                <li class="item"><a href="#">Leaderboards</a></li>
-                <li class="item"><a href="#"><fa icon="user"></fa></a></li>
-                <li class="item"><a href="#"><fa icon="search"></fa></a></li>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <img class="logo" src="../assets/logo.svg">
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <fa icon="burger" size="2xl"></fa>
+            </label>
+        </div>
 
-                <li class="toggle"><a href="#">
-                        <fa icon="bars"></fa>
-                    </a></li>
-            </ul>
-        </nav>
+        <div class="nav-links">
+            <a href="#" target="_blank">Home</a>
+            <a href="#" target="_blank">Games<fa class="down-arrow" icon="caret-down"/></a>
+            <a href="#" target="_blank">Tournaments<fa class="down-arrow" icon="caret-down"/></a>
+            <a href="#" target="_blank">Leaderboards</a>
+            <a href="#" target="_blank">
+                <fa icon="user"></fa>
+            </a>
+            <a href="#" target="_blank">
+                <fa icon="search"></fa>
+            </a>
+        </div>
     </div>
     <div class="hero-container">
-        <img class="hero-image" src="../assets/images/hero-image.png" alt="">
+        <img class="hero-image" src="../assets/images/hero-image.jpeg" alt="">
     </div>
 </template>
 
 <script>
-export default {
-    mounted() {
-        // import('../navbar').then(m => {
-        //     return m;
-        // });
-    },
-}
+
 </script>
 
 <style>
-nav {
-    background: var(--secondary-bg-color);
-    padding: 0 70px;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.fa-icon {
-    padding-left: 5px;
-}
-
-.menu,
-.submenu {
-    list-style-type: none;
-}
-
-.logo img {
-
+.logo {
     width: 42px;
     height: 42px;
 }
 
-li .logo {
-    height: 100%;
-    align-items: center;
+.nav {
+    height: 65px;
+    width: 100%;
+    padding: 0 70px;
     display: flex;
-}
-
-.item {
-    padding: 0 15px;
-}
-
-/* Mobile menu */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    background-color: var(--secondary-bg-color);
 }
 
-.menu li a {
-    display: block;
+.down-arrow {
+    padding-left: 10px;
 }
 
-.menu li.subitem a {
-    padding: 15px;
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
 }
 
-.toggle {
-    order: 1;
-    font-size: 20px;
-}
-
-.item {
-    order: 3;
-    width: 100%;
-    text-align: center;
+.nav>.nav-btn {
     display: none;
 }
 
-/* Submenu up from mobile screens */
-.submenu {
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav svg:hover {
+    cursor: pointer;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.nav>#nav-check {
     display: none;
 }
 
-.submenu-active .submenu {
-    display: block;
-}
-
-
-.subitem a {
-    padding: 10px 15px;
-}
-
-.submenu-active {
-    background-color: #111;
-    border-radius: 3px;
-}
-
-/* Tablet menu */
-@media all and (min-width: 700px) {
-    .menu {
-        justify-content: center;
+@media (max-width:800px) {
+    .nav {
+        padding: 15px;
     }
 
-    .logo {
-        flex: 1;
+    svg {
+        color: white;
     }
 
-    .item.button {
-        width: auto;
-        order: 1;
-        display: block;
-    }
-
-    .toggle {
-        flex: 1;
-        text-align: right;
-        order: 2;
-    }
-
-    /* Button up from tablet screen */
-    .menu li.button a {
-        padding: 10px 15px;
-        margin: 5px 0;
-    }
-}
-
-/* Desktop menu */
-@media all and (min-width: 960px) {
-    .menu {
-        align-items: center;
-        flex-wrap: nowrap;
+    .nav>.nav-btn {
         display: flex;
-        background: none;
+        width: 100%;
+        justify-content: flex-end;
     }
 
-    .logo {
-        order: 0;
-    }
-
-    .item {
-        order: 1;
-        position: relative;
-        display: block;
-        width: auto;
-    }
-
-    .submenu-active .submenu {
-        display: block;
+    .nav>.nav-links {
         position: absolute;
-        left: 0;
-        top: 68px;
-        background: #111;
+        display: block;
+        width: 100%;
+        background-color: var(--secondary-bg-color);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        padding: 0 15px;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
     }
 
-    .toggle {
-        display: none;
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
     }
 
-    .submenu-active {
-        border-radius: 0;
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
     }
-}
 
-.hero-container {
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.hero-image {
-    height: 325px;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    object-fit: cover;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .nav>#nav-check:checked~.nav-links {
+        height: auto;
+        overflow-y: auto;
+    }
 }
 </style>
