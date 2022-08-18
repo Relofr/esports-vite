@@ -41,10 +41,9 @@
 .content-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 25px 0px;
-    gap: 250px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .content {
