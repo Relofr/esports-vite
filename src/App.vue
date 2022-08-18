@@ -1,6 +1,7 @@
 <script setup>
 import Card from './components/Card.vue'
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -10,10 +11,10 @@ import Navbar from './components/Navbar.vue'
     <div class="tournament-container">
       <Card :src="dk" isOpen regStatus="Registration Open" title="Weekly Smash Party" price="10" location="Murray, UT"
         date="20 August" time="8:00 PM" participants="47" />
-      <Card :src="gameover" isOpen regStatus="Registration Open" title="Wavedash 2022" price="FREE" location="Online" date="Aug 10th"
-        time="4:00 PM" participants="116" />
-      <Card :src="mushroom" isEnding regStatus="Registration Ending" title="Super Smash Con 2022" price="10" location="Online"
-        date="Sep 16th" time="4:00 PM" participants="113" />
+      <Card :src="gameover" isOpen regStatus="Registration Open" title="Wavedash 2022" price="FREE" location="Online"
+        date="Aug 10th" time="4:00 PM" participants="116" />
+      <Card :src="mushroom" isEnding regStatus="Registration Ending" title="Super Smash Con 2022" price="10"
+        location="Online" date="Sep 16th" time="4:00 PM" participants="113" />
       <Card :src="nolimits" isEnding regStatus="Registration Ending" title="SHINE" price="20" location="Oceanside, CA"
         date="Aug 18th - 24th" time="10 AM" participants="456" />
       <Card :src="room" isClosed isDisabled regStatus="Registration Closed" title="Super Hitbox Bros" price="5"
@@ -22,6 +23,7 @@ import Navbar from './components/Navbar.vue'
         location="Provo, UT" date="Aug 24th" time="6:00 PM" participants="2" />
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
@@ -65,6 +67,12 @@ import tv from '../src/assets/images/tv.png';
     padding: 0px;
     gap: 20px;
     width: 100%;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
   }
 }
 </style>

@@ -20,6 +20,7 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
+  --fs-24: 24px;
   --fs-48: 48px;
 }
 
@@ -78,6 +79,13 @@ img {
 
 .accent-color {
   color: var(--accent-color);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fs-24 {
+  font-size: var(--fs-24);
 }
 
 .title {
