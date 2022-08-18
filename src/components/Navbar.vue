@@ -16,15 +16,15 @@
             </div>
 
             <div class="nav-links">
-                <a href="//github.io/jo_geek" target="_blank">Home</a>
-                <a href="http://stackoverflow.com/users/4084003/" target="_blank">Games<fa icon="angle-down"></fa></a>
-                <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">Tournaments<fa icon="angle-down">
+                <a target="_blank">Home</a>
+                <a target="_blank">Games<fa icon="angle-down"></fa></a>
+                <a target="_blank">Tournaments<fa icon="angle-down">
                     </fa></a>
-                <a href="https://codepen.io/jo_Geek/" target="_blank">Leaderboards</a>
-                <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
+                <a target="_blank">Leaderboards</a>
+                <a target="_blank">
                     <fa icon="user"></fa>
                 </a>
-                <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
+                <a target="_blank">
                     <fa icon="search"></fa>
                 </a>
             </div>

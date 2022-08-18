@@ -13,7 +13,7 @@ import Navbar from './components/Navbar.vue'
 <style scoped>
 .container {
   width: 90%;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 50px auto;
   display: flex;
   flex-direction: column;
