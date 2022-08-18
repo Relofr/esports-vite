@@ -83,6 +83,7 @@ export default {
   width: auto;
   max-width: 400px;
   color: var(--primary-color);
+  margin-bottom: 50px;
 }
 
 img {
