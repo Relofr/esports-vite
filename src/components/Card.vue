@@ -67,7 +67,7 @@ export default {
       type: String
     },
     participants: {
-      type: Number
+      type: String
     }
   }
 }
@@ -80,7 +80,8 @@ export default {
   align-items: flex-start;
   padding: 0px;
   gap: 15px;
-  width: 400px;
+  width: auto;
+  max-width: 400px;
   color: var(--primary-color);
 }
 
