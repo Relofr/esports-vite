@@ -174,6 +174,7 @@ img {
   align-items: flex-start;
   padding: 0px;
   gap: 10px;
+  width: 100%;
 }
 
 .card-info svg {
@@ -216,12 +217,23 @@ img {
   background: #ffb84e;
 }
 
-.isDisabled, .isDisabled:hover {
+.isDisabled,
+.isDisabled:hover {
   background-color: grey;
   cursor: not-allowed;
 }
 
 p {
   padding: 0;
+}
+
+@media (max-width: 915px) {
+  .tournament-card {
+    max-width: 100%;
+  }
+
+  .btn {
+    min-width: 100%;
+  }
 }
 </style>

@@ -11,14 +11,14 @@
         </div>
 
         <div class="nav-links">
-            <a href="#" target="_blank">Home</a>
-            <a href="#" target="_blank">Games<fa class="down-arrow" icon="caret-down"/></a>
-            <a href="#" target="_blank">Tournaments<fa class="down-arrow" icon="caret-down"/></a>
-            <a href="#" target="_blank">Leaderboards</a>
-            <a href="#" target="_blank">
+            <a>Home</a>
+            <a>Games<fa class="down-arrow" icon="caret-down"/></a>
+            <a>Tournaments<fa class="down-arrow" icon="caret-down"/></a>
+            <a>Leaderboards</a>
+            <a>
                 <fa icon="user"></fa>
             </a>
-            <a href="#" target="_blank">
+            <a>
                 <fa icon="search"></fa>
             </a>
         </div>
@@ -36,10 +36,16 @@
 .logo {
     width: 42px;
     height: 42px;
+    cursor: pointer;
+}
+
+img {
+    height: 350px;
+    object-fit: cover;
 }
 
 .nav {
-    height: 65px;
+    height: 85px;
     width: 100%;
     padding: 0 70px;
     display: flex;
@@ -68,6 +74,7 @@
     float: right;
     font-size: 18px;
     font-weight: var(--fw-bold);
+    cursor: pointer;
 }
 
 .nav>.nav-links>a {

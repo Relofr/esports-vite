@@ -44,6 +44,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    padding: 1.5em;
 }
 
 .content {
